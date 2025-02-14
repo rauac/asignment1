@@ -7,5 +7,8 @@ public class Main {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
         Phone iphone = context.getBean(Phone.class);
         System.out.println(iphone.getBrand());
+        OS ios = context.getBean(OS.class);
+        ios.setName("IOS");
+        System.out.println(ios.getName());
     }
 }
