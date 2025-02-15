@@ -9,6 +9,7 @@ public class Main {
         System.out.println(iphone.getBrand());
         OS ios = context.getBean(OS.class);
         ios.setName("IOS");
-        System.out.println(ios.getName());
+        iphone.setOS(ios);
+        System.out.println(iphone.getOS().getName());
     }
 }

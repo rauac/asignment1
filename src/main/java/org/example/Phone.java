@@ -1,10 +1,12 @@
 package org.example;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Phone {
     private String name;
     private String brand;
     private int price;
-    private int version;
+    private OS OS;
 
     public String getName() {
         return name;
@@ -29,12 +31,12 @@ public class Phone {
     public void setPrice(int price) {
         this.price = price;
     }
-
-    public int getVersion() {
-        return version;
+    @Autowired
+    public void setOS(OS OS) {
+        this.OS = OS;
     }
 
-    public void setVersion(int version) {
-        this.version = version;
+    public OS getOS() {
+        return OS;
     }
 }
